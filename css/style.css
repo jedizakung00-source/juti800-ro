@@ -1,0 +1,90 @@
+    @import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    body,html {
+        font-family: "Prompt", sans-serif;
+    }
+    .bg-img {
+        background-image: url("../img/bgg.png");
+        min-height: 700px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    .bg-footer {
+        background-image: url("../img/bg_footer.png");
+        min-height: 700px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    .template-animation {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        overflow: hidden;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+    .c-img {
+        -webkit-animation: floatAnimation 2s ease-in-out infinite;
+        animation: floatAnimation 2s ease-in-out infinite;
+        -webkit-transition: opacity 0.1s, -webkit-transform 0.2s;
+        transition: opacity 0.1s, -webkit-transform 0.2s;
+        transition: opacity 0.1s, transform 0.2s;
+        transition: opacity 0.1s, transform 0.2s, -webkit-transform 0.2s;
+    }
+    .c-img:hover {
+        opacity: 0.9;
+    }
+    @-webkit-keyframes floatAnimation {
+        0% {
+            -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+        }
+        50% {
+            -webkit-transform: translate(0, 10px);
+            transform: translate(0, 10px);
+        }
+        100% {
+            -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+        }
+    }
+    @keyframes floatAnimation {
+        0% {
+            -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+        }
+        50% {
+            -webkit-transform: translate(0, 10px);
+            transform: translate(0, 10px);
+        }
+        100% {
+            -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+        }
+    }
+    .dropdown-menu li .dropdown-item {
+        font-size: 1em;
+        padding: 0.5em 1em;
+    }
+    .dropdown-menu {
+        border: none;
+        border-radius: 0 0 10px 10px;
+        padding: 0.7em;
+    }
+
+    /* Styles for Scroll to Top Button Visibility */
+    .scroll-to-top-btn {
+        display: none; /* Hidden by default */
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out; /* Smooth fade effect */
+    }
+
+    .scroll-to-top-btn.show {
+        display: flex; /* Show as flex to center icon */
+        opacity: 1;
+    }
