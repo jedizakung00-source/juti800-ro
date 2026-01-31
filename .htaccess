@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteCond %{HTTP_USER_AGENT} HTTrack [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} libwww-perl [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} wget [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} "site Sucker" [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} "AhrefsBot" [NC]
+RewriteRule ^.*$ - [F,L]
